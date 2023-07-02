@@ -40,9 +40,6 @@ The project follows a common Next.js project structure to ensure readability, ma
 ├── components/
 ├── data/                    # CSS or styling related
 │   ├── projectsData.tsx
-│   ├── _app.tsx             # Main application component
-│   └── index.tsx            # / route
-│   └── projects.tsx         # Entry point
 ├── public/                  # Static assets
 ├── .gitignore               # Files and directories to be ignored by Git
 ├── next.config.js           # Next.js configuration
