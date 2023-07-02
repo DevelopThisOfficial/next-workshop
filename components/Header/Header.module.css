@@ -1,0 +1,36 @@
+.headerStyles {
+  background-color: var(--rainstorm);
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 30px;
+  align-items: center;
+}
+
+.myName {
+  font-size: 2rem;
+  color: white;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.navLink {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.navLink:hover {
+  color: var(--golden-chalice);
+}
+
+.active {
+  color: var(--shrimp-cocktail);
+}
+
+.inactive {
+  color: var(--bloodletter);
+}

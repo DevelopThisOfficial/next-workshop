@@ -1,0 +1,7 @@
+.footer {
+  background-color: var(--rainstorm);
+  height: 70px;
+  color: white;
+  display: grid;
+  place-items: center;
+}
