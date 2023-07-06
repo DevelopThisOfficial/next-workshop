@@ -33,4 +33,6 @@ a {
 #main-children {
   flex: 1;
   background-color: var(--azure-tide-light);
+  display: flex;
+  flex-direction: column;
 }

@@ -3,13 +3,14 @@
   /* border: 3px solid red; */
   max-width: 1000px;
   margin: 60px auto;
+  padding: 0px 60px;
 }
 
 .imageWrapper {
-  width: 300px;
-  height: 300px;
+  min-width: 300px;
+  min-height: 300px;
   position: relative;
-  flex-shrink: 0;
+  flex: 1;
 }
 
 .bioText {
@@ -17,6 +18,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex: 1;
 }
 .sectionTitle {
   font-size: 2rem;
