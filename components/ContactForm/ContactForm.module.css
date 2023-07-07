@@ -1,0 +1,29 @@
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 25rem;
+  margin: auto;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexColumn label {
+  font-size: 1.5rem;
+}
+
+.flexColumn input {
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+.flexColumn button {
+  background-color: var(--bloodletter);
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+}

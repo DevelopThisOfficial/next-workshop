@@ -16,7 +16,7 @@ const Header = (): JSX.Element => {
             <Link
               href="/"
               className={`
-                ${styles.navLink}
+              ${styles.navLink}
                 ${pathname === "/" ? styles.active : styles.inactive}
             `}
             >
@@ -43,6 +43,17 @@ const Header = (): JSX.Element => {
             `}
             >
               Game
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/contact"
+              className={`
+                ${styles.navLink}
+                ${pathname === "/contact" ? styles.active : styles.inactive}
+            `}
+            >
+              Contact
             </Link>
           </li>
         </ul>
