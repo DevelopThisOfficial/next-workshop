@@ -1,0 +1,42 @@
+.postBody {
+  margin: 2rem 0 4rem 0;
+}
+
+.line {
+  /* border-width: 10px; */
+  border: 2px solid var(--rainstorm);
+  border-radius: 5px;
+  margin: 1rem 0rem;
+}
+
+.comments {
+  /* this is the ul */
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  line-height: 1.4rem;
+}
+
+.quote {
+  display: flex;
+  justify-content: end;
+  margin: 1.2rem;
+}
+
+.commentAuthor {
+  position: relative;
+  /* border: 2px solid red; */
+  width: max-content;
+}
+
+.commentAuthor::before {
+  content: "";
+  position: absolute;
+  left: -5rem;
+  /* right: 10px; */
+  height: 2px;
+  width: 4rem;
+  background: var(--rainstorm);
+  top: 50%;
+}

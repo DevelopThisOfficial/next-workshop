@@ -25,24 +25,13 @@ const Header = (): JSX.Element => {
           </li>
           <li>
             <Link
-              href="/projects"
+              href="/posts"
               className={`
                 ${styles.navLink}
-                ${pathname === "/projects" ? styles.active : styles.inactive}
+                ${pathname === "/posts" ? styles.active : styles.inactive}
             `}
             >
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/games"
-              className={`
-                ${styles.navLink}
-                ${pathname === "/games" ? styles.active : styles.inactive}
-            `}
-            >
-              Game
+              Posts
             </Link>
           </li>
           <li>

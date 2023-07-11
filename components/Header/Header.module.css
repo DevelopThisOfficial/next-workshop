@@ -24,13 +24,13 @@
 }
 
 .navLink:hover {
-  color: var(--golden-chalice);
+  color: #e3eef2;
 }
 
 .active {
-  color: var(--shrimp-cocktail);
+  color: var(--azure-tide-light);
 }
 
 .inactive {
-  color: var(--bloodletter);
+  color: #b9d4df;
 }

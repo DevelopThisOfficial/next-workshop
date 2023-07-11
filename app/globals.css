@@ -1,10 +1,13 @@
 :root {
   --rainstorm: #264653;
+  --blue-hosta: #287271;
   --azure-tide: #2a9d8f;
   --azure-tide-light: #edfaf9;
   --golden-chalice: #e9c46a;
   --shrimp-cocktail: #f4a261;
   --bloodletter: #e76f51;
+
+  --max-width: 1000px;
 }
 /* https://coolors.co/palette/264653-2a9d8f-e9c46a-f4a261-e76f51 */
 
@@ -19,9 +22,34 @@
   margin: 0;
 }
 
+h1 {
+  margin: 2rem 0;
+  color: var(--azure-tide);
+}
+
+h2 {
+  margin: 1rem 0;
+}
+
+h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.link:hover {
+  text-decoration: underline;
+  color: var(--bloodletter);
 }
 
 #main-parent {
@@ -35,4 +63,17 @@ a {
   background-color: var(--azure-tide-light);
   display: flex;
   flex-direction: column;
+  padding: 2rem;
+}
+
+.section {
+  /* padding: 2rem; */
+  max-width: var(--max-width);
+  margin: 0px auto;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--azure-tide);
 }
