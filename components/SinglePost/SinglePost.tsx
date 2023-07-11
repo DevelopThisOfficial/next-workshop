@@ -5,6 +5,13 @@ import { getSingleUser } from "@/data/users";
 import { useParams } from "next/navigation";
 import React from "react";
 
+export type Post = {
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
+};
+
 export default async function SinglePost() {
   const params = useParams();
   const { id } = params;

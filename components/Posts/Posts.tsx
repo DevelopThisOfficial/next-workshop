@@ -4,13 +4,7 @@ import { getAllUsers } from "@/data/users";
 import { getAllPosts } from "@/data/posts";
 import Image from "next/image";
 import arrowRight from "./arrow-right.svg";
-
-type Post = {
-  userId: number;
-  id: number;
-  title: string;
-  body: string;
-};
+import { Post } from "../SinglePost/SinglePost";
 
 type User = {
   id: number;
