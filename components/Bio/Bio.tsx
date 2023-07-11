@@ -9,7 +9,9 @@ function Bio() {
         <Image
           src="https://picsum.photos/300"
           fill={true}
-          objectFit="contain"
+          style={{
+            objectFit: "contain",
+          }}
           alt="Picture of Jude Clark"
         />
       </div>

@@ -1,8 +1,9 @@
 :root {
+  --azul-primavera: #e3eef2;
+  --millstream: #b9d4df;
   --rainstorm: #264653;
-  --blue-hosta: #287271;
+  --cold-white: #edfaf9;
   --azure-tide: #2a9d8f;
-  --azure-tide-light: #edfaf9;
   --golden-chalice: #e9c46a;
   --shrimp-cocktail: #f4a261;
   --bloodletter: #e76f51;
@@ -60,14 +61,13 @@ a {
 
 #main-children {
   flex: 1;
-  background-color: var(--azure-tide-light);
+  background-color: var(--cold-white);
   display: flex;
   flex-direction: column;
   padding: 2rem;
 }
 
 .section {
-  /* padding: 2rem; */
   max-width: var(--max-width);
   margin: 0px auto;
 }
