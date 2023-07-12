@@ -17,7 +17,7 @@ function Bio() {
       </div>
 
       <div className={styles.bioText}>
-        <h2 className={styles.sectionTitle}>About Me</h2>
+        <h2 className="sectionTitle">About Me</h2>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias,
           dolorem laborum repellat illo minima corrupti at aperiam est. Earum

@@ -70,6 +70,7 @@ a {
 .section {
   max-width: var(--max-width);
   margin: 0px auto;
+  padding: 2rem 4rem;
 }
 
 .sectionTitle {
