@@ -20,8 +20,3 @@
   justify-content: center;
   flex: 1;
 }
-.sectionTitle {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: var(--azure-tide);
-}
