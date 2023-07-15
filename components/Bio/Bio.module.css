@@ -1,11 +1,3 @@
-.bioSection {
-  display: flex;
-  /* border: 3px solid red; */
-  max-width: 1000px;
-  margin: 60px auto;
-  padding: 0px 60px;
-}
-
 .imageWrapper {
   min-width: 300px;
   min-height: 300px;

@@ -2,6 +2,8 @@ import Link from "next/link";
 import styles from "./Posts.module.css";
 import { getAllUsers } from "@/data/users";
 import { getAllPosts } from "@/data/posts";
+import Image from "next/image";
+import arrowRight from "./arrow-right.svg";
 
 type Post = {
   userId: number;
@@ -26,23 +28,22 @@ async function Posts() {
     return user ? user.username : "Unknown user";
   }
 
-  return (
-    <div className="sectionWrapper">
-      <h1 className="sectionTitle">All Posts</h1>
-      <div className={styles.posts}>
-        {/* wrapper of all posts */}
+  // todo: paginate
 
-        {/* map the posts */}
-        {posts.map((post: Post) => {
-          return (
-            <div key={post.id} className={styles.post}>
-              <h3>
-                <Link href={`/posts/${post.id}`}>{post.title}</Link>
-              </h3>
-              <p>by {getUser(post.userId)}</p>
-            </div>
-          );
-        })}
+  return (
+    <div className="section">
+      <h1>List of Posts</h1>
+      <div className={styles.posts}>
+        {posts.map((post) => (
+          <div key={post.id}>
+            {/* Doing the link syntax like this got rid of all the 404 errors except 1 */}
+            <Link href="/posts/id" as={`/posts/${post.id}`} className="link">
+              {post.title}
+              <Image src={arrowRight} alt="" height={24} width={24} />
+            </Link>
+            <p>by {getUser(post.userId)}</p>
+          </div>
+        ))}
       </div>
     </div>
   );

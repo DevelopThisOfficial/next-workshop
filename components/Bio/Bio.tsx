@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function Bio() {
   return (
-    <div className={styles.bioSection}>
+    <div className="section" style={{ display: "flex" }}>
       <div className={styles.imageWrapper}>
         <Image
           src="https://picsum.photos/300"

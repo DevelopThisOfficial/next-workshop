@@ -14,10 +14,13 @@ export default async function SinglePost() {
   const user = await getSingleUser(post.userId);
 
   return (
-    <div className="sectionWrapper">
+    <div className="section">
+      {/* todo: back to posts */}
       <h2 className="sectionTitle">{post.title}</h2>
       <p>{post.body}</p>
+      {/* todo: link to user page */}
       <h3>by {user.username}</h3>
     </div>
+    // todo: add comments
   );
 }
