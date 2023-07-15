@@ -1,4 +1,4 @@
-import SinglePost from "@/components/SinglePost.tsx/SinglePost";
+import SinglePost from "@/components/SinglePost/SinglePost";
 
 export default function SinglePostPage() {
   return <SinglePost />;
