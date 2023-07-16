@@ -1,9 +1,13 @@
 "use client";
-
+// THIS IS IN USE
 import { getSinglePost } from "@/data/posts";
 import { getSingleUser } from "@/data/users";
 import { useParams } from "next/navigation";
 import React from "react";
+import styles from "./SinglePost.module.css";
+import Link from "next/link";
+import Image from "next/image";
+import arrowLeft from "./arrow-left.svg";
 
 export type Post = {
   userId: number;
@@ -22,12 +26,32 @@ export default async function SinglePost() {
 
   return (
     <div className="section">
-      {/* todo: back to posts */}
+      <Link href="/posts" className={`link hover ${styles.goBack}`}>
+        <Image src={arrowLeft} alt="" height={24} width={24} />
+        Back to Posts
+      </Link>
       <h2 className="sectionTitle">{post.title}</h2>
-      <p>{post.body}</p>
+      <p className={styles.postBody}>{post.body}</p>
       {/* todo: link to user page */}
       <h3>by {user.username}</h3>
+      {/* {comments.length > 0 && (
+        <>
+          <h3>Comments</h3>
+          <hr className={styles.line} />
+          <ul className={styles.comments}>
+            {comments.map((comment) => (
+              <li key={comment.id} className={styles.comment}>
+                <h4>{comment.name}</h4>
+                <p>{comment.body}</p>
+                <div className={styles.quote}>
+               
+                  <p className={styles.commentAuthor}>{user.username}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </>
+      )} */}
     </div>
-    // todo: add comments
   );
 }

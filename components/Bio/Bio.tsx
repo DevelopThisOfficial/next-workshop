@@ -1,19 +1,13 @@
 import React from "react";
 import styles from "./Bio.module.css";
 import Image from "next/image";
+import android from "./android.png";
 
 function Bio() {
   return (
-    <div className="section" style={{ display: "flex" }}>
+    <div className={`section ${styles.bioSection}`}>
       <div className={styles.imageWrapper}>
-        <Image
-          src="https://picsum.photos/300"
-          fill={true}
-          style={{
-            objectFit: "contain",
-          }}
-          alt="Picture of Jude Clark"
-        />
+        <Image src={android} fill={true} alt="Android admiring flowers" />
       </div>
 
       <div className={styles.bioText}>

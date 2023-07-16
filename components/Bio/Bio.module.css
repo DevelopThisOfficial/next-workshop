@@ -1,8 +1,14 @@
+.bioSection {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .imageWrapper {
-  min-width: 300px;
-  min-height: 300px;
   position: relative;
-  flex: 1;
 }
 
 .bioText {
