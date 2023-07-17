@@ -11,3 +11,11 @@ export async function getAllPosts() {
 
   return await postData.json();
 }
+
+export async function getPostComments(id: number) {
+  const comments = await fetch(
+    `https://jsonplaceholder.typicode.com/posts/${id}/comments`
+  );
+
+  return await comments.json();
+}

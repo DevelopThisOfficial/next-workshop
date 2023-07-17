@@ -2,17 +2,12 @@
 
 import Link from "next/link";
 import styles from "./Posts.module.css";
-import { getAllUsers } from "@/data/users";
 import { getAllPosts } from "@/data/posts";
+import { getAllUsers } from "@/data/users";
 import Image from "next/image";
 import arrowRight from "./arrow-right.svg";
-import { Post } from "../SinglePost/SinglePost";
 import { useRouter } from "next/navigation";
-
-type User = {
-  id: number;
-  username: string;
-};
+import { Post, User } from "@/data/types";
 
 async function Posts() {
   const router = useRouter();

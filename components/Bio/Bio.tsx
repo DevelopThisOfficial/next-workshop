@@ -5,13 +5,20 @@ import android from "./android.png";
 
 function Bio() {
   return (
-    <div className={`section ${styles.bioSection}`}>
+    <div className="section">
       <div className={styles.imageWrapper}>
-        <Image src={android} fill={true} alt="Android admiring flowers" />
+        <Image
+          src={android}
+          fill={true}
+          alt="Android admiring flowers"
+          style={{
+            objectFit: "contain",
+          }}
+        />
       </div>
 
       <div className={styles.bioText}>
-        <h2 className="sectionTitle">About Me</h2>
+        <h2 className="sectionTitle">Welcome</h2>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias,
           dolorem laborum repellat illo minima corrupti at aperiam est. Earum

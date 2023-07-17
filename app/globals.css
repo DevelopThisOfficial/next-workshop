@@ -66,11 +66,12 @@ a {
 }
 
 .section {
-  max-width: var(--max-width);
+  max-width: 100%;
   margin: 0px auto;
   padding: 0;
 
   @media screen and (min-width: 768px) {
+    max-width: var(--max-width);
     padding: 2rem 4rem;
   }
 }

@@ -9,7 +9,7 @@ const Header = (): JSX.Element => {
 
   return (
     <header className={styles.headerStyles}>
-      <div className={styles.myName}>Jude Clark</div>
+      <div className={styles.headerTitle}>DevelopThis Next.js</div>
       <div>
         <ul className={styles.navLinks}>
           <li>
