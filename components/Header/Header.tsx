@@ -3,6 +3,7 @@
 import styles from "./Header.module.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 
 const Header = (): JSX.Element => {
   const pathname = usePathname();
@@ -11,6 +12,7 @@ const Header = (): JSX.Element => {
     <header className={styles.headerStyles}>
       <div className={styles.headerTitle}>DevelopThis Next.js</div>
       <div>
+        {/* <HamburgerMenuIcon /> */}
         <ul className={styles.navLinks}>
           <li>
             <Link

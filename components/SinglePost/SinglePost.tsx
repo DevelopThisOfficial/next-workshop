@@ -8,6 +8,7 @@ import styles from "./SinglePost.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import arrowLeft from "./arrow-left.svg";
+import { Comment } from "@/data/types";
 
 export default async function SinglePost() {
   const params = useParams();
@@ -15,7 +16,7 @@ export default async function SinglePost() {
 
   const post = await getSinglePost(Number(id));
   const author = await getSingleUser(post.userId);
-  const comments = await getPostComments(Number(id));
+  const comments: Comment[] = await getPostComments(Number(id));
 
   return (
     <div className="section">
@@ -26,10 +27,16 @@ export default async function SinglePost() {
       <h2 className="sectionTitle">{post.title}</h2>
       <p className={styles.postBody}>{post.body}</p>
       {/* todo: link to user page */}
-      <h3>by {author.username}</h3>
+      <h3 style={{ marginBottom: "3rem" }}> by {author.username}</h3>
       {comments.length > 0 && (
         <>
-          <h3>Comments</h3>
+          <h3
+            style={{
+              color: "var(--azure-tide)",
+            }}
+          >
+            Comments
+          </h3>
           <hr className={styles.line} />
           <ul className={styles.comments}>
             {comments.map((comment) => (

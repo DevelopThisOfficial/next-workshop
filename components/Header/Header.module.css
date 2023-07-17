@@ -8,8 +8,12 @@
 }
 
 .headerTitle {
-  font-size: 2rem;
+  font-size: 1.3rem;
   color: white;
+
+  @media screen and (min-width: 768px) {
+    font-size: 2rem;
+  }
 }
 
 .navLinks {
@@ -19,8 +23,12 @@
 }
 
 .navLink {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: bold;
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.1rem;
+  }
 }
 
 .navLink:hover {

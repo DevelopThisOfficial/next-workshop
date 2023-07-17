@@ -1,3 +1,8 @@
+export type User = {
+  id: number;
+  username: string;
+};
+
 export type Post = {
   userId: number;
   id: number;
@@ -5,7 +10,10 @@ export type Post = {
   body: string;
 };
 
-export type User = {
+export type Comment = {
+  postId: number;
   id: number;
-  username: string;
-};
+  name: string;
+  email: string;
+  body: string;
+}
