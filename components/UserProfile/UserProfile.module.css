@@ -1,0 +1,16 @@
+.userInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1rem;
+  column-gap: 2rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border-radius: 0.4rem;
+  margin-bottom: 2rem;
+}
+
+.gridItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+}

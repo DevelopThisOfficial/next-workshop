@@ -7,16 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import arrowRight from "public/arrow-right.svg";
 import { Post } from "@/data/types";
-
-const tempPostsArray = [
-  {
-    userId: 1,
-    id: 1,
-    title:
-      "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-    body: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-  },
-];
+import styles from "./UserProfile.module.css";
 
 async function UserProfile() {
   const params = useParams();
@@ -32,27 +23,9 @@ async function UserProfile() {
         <h2 className="sectionTitle">{user.name}</h2>
         User Profile
         <hr className="line" />
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            rowGap: "1rem",
-            columnGap: "2rem",
-            backgroundColor: "rgba(0,0,0,.1)",
-            padding: "2rem",
-            borderRadius: ".4rem",
-            marginBottom: "2rem",
-          }}
-        >
+        <div className={styles.userInfo}>
           {gridFields.map((field) => (
-            <div
-              key={`${field}-field`}
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: ".6rem",
-              }}
-            >
+            <div key={`${field}-field`} className={styles.gridItem}>
               <span
                 style={{
                   fontWeight: "bold",
