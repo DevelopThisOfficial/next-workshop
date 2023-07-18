@@ -14,16 +14,15 @@
 .quote {
   display: flex;
   justify-content: flex-end;
-  margin: 1.2rem;
+  margin: 1.2rem 0;
 }
 
-.commentAuthor {
+.quoteLine {
+  width: fit-content;
   position: relative;
-  width: max-content;
 }
 
-/* this is the 'quote' line */
-.commentAuthor::before {
+.quoteLine::before {
   content: "";
   position: absolute;
   left: -5rem;

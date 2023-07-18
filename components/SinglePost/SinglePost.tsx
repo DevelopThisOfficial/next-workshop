@@ -34,22 +34,16 @@ export default async function SinglePost() {
       <p className={styles.postBody}>{post.body}</p>
       {/* todo: link to user page */}
 
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: ".6rem",
-          marginBottom: "2rem",
-        }}
-      >
-        <span>by</span>
-        <Link
-          href="/user/[id]"
-          as={`/user/${post.userId}`}
-          className="link hover btn-link"
-        >
-          @{author.username}
-        </Link>
+      <div className={styles.quote}>
+        <span className={styles.quoteLine}>
+          <Link
+            href="/user/[id]"
+            as={`/user/${post.userId}`}
+            className="link hover btn-link"
+          >
+            @{author.username}
+          </Link>
+        </span>
       </div>
 
       {comments.length > 0 && (
@@ -68,7 +62,7 @@ export default async function SinglePost() {
                 <h4>{comment.name}</h4>
                 <p>{comment.body}</p>
                 <div className={styles.quote}>
-                  <p className={styles.commentAuthor}>{comment.email}</p>
+                  <p className={styles.quoteLine}>{comment.email}</p>
                 </div>
               </li>
             ))}
