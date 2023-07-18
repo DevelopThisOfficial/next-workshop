@@ -59,7 +59,6 @@ async function Posts() {
                   @{getUsernameFromCachedList(post.userId) || "Unknown user"}
                 </Link>
               </div>
-              {/* by @{getUsernameFromCachedList(post.userId) || "Unknown user"} */}
             </span>
           </div>
         ))}

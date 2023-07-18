@@ -2,12 +2,6 @@
   margin: 2rem 0 1rem 0;
 }
 
-.line {
-  border: 2px solid var(--rainstorm);
-  border-radius: 5px;
-  margin: 1rem 0rem;
-}
-
 .comments {
   /* this is the ul */
   list-style: none;

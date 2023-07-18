@@ -61,7 +61,7 @@ export default async function SinglePost() {
           >
             Comments
           </h3>
-          <hr className={styles.line} />
+          <hr className="line" />
           <ul className={styles.comments}>
             {comments.map((comment) => (
               <li key={comment.id} className={styles.comment}>
