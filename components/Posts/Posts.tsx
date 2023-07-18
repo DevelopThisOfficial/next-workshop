@@ -5,7 +5,7 @@ import styles from "./Posts.module.css";
 import { getAllPosts } from "@/data/posts";
 import { getAllUsers } from "@/data/users";
 import Image from "next/image";
-import arrowRight from "./arrow-right.svg";
+import arrowRight from "public/arrow-right.svg";
 import { useRouter } from "next/navigation";
 import { Post, User } from "@/data/types";
 
@@ -33,7 +33,7 @@ async function Posts() {
               router.push(`/posts/${post.id}`);
             }}
           >
-            <Link href="/posts/id" as={`/posts/${post.id}`} className="link">
+            <Link href="/posts/[id]" as={`/posts/${post.id}`} className="link">
               {post.title}
               <Image src={arrowRight} alt="" height={24} width={24} />
             </Link>
@@ -41,10 +41,25 @@ async function Posts() {
               className="author"
               onClick={(e) => {
                 e.stopPropagation();
-                console.log("clicked on author");
               }}
             >
-              by {getUsernameFromCachedList(post.userId) || "Unknown user"}
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: ".6rem",
+                }}
+              >
+                <span>by</span>
+                <Link
+                  href="/user/[id]"
+                  as={`/user/${post.userId}`}
+                  className="link hover btn-link"
+                >
+                  @{getUsernameFromCachedList(post.userId) || "Unknown user"}
+                </Link>
+              </div>
+              {/* by @{getUsernameFromCachedList(post.userId) || "Unknown user"} */}
             </span>
           </div>
         ))}

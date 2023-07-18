@@ -1,5 +1,5 @@
-import Bio from "@/components/Bio/Bio";
+import Welcome from "@/components/Welcome/Welcome";
 
 export default function Home() {
-  return <Bio />;
+  return <Welcome />;
 }

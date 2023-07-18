@@ -50,10 +50,17 @@ a {
   color: var(--bloodletter);
 }
 
+.btn-link {
+  padding: 0.5rem;
+  margin-left: -0.5rem;
+  width: fit-content;
+}
+
 #main-parent {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 #main-children {

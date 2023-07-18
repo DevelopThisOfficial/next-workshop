@@ -1,5 +1,5 @@
 .postBody {
-  margin: 2rem 0;
+  margin: 2rem 0 1rem 0;
 }
 
 .line {
@@ -28,6 +28,7 @@
   width: max-content;
 }
 
+/* this is the 'quote' line */
 .commentAuthor::before {
   content: "";
   position: absolute;
@@ -39,6 +40,13 @@
 }
 
 .goBack {
+  padding: 0.5rem;
+  margin-left: -0.5rem;
+  width: fit-content;
+  margin-bottom: 2rem;
+}
+
+.goToUser {
   padding: 0.5rem;
   margin-left: -0.5rem;
   width: fit-content;

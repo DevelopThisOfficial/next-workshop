@@ -7,7 +7,7 @@ import React from "react";
 import styles from "./SinglePost.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import arrowLeft from "./arrow-left.svg";
+import arrowLeft from "public/arrow-left.svg";
 import { Comment } from "@/data/types";
 
 export default async function SinglePost() {
@@ -20,14 +20,38 @@ export default async function SinglePost() {
 
   return (
     <div className="section">
-      <Link href="/posts" className={`link hover ${styles.goBack}`}>
+      <Link
+        href="/posts"
+        className="link hover btn-link"
+        style={{
+          marginBottom: "2rem",
+        }}
+      >
         <Image src={arrowLeft} alt="" height={24} width={24} />
         Back to Posts
       </Link>
       <h2 className="sectionTitle">{post.title}</h2>
       <p className={styles.postBody}>{post.body}</p>
       {/* todo: link to user page */}
-      <h3 style={{ marginBottom: "3rem" }}> by {author.username}</h3>
+
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: ".6rem",
+          marginBottom: "2rem",
+        }}
+      >
+        <span>by</span>
+        <Link
+          href="/user/[id]"
+          as={`/user/${post.userId}`}
+          className="link hover btn-link"
+        >
+          @{author.username}
+        </Link>
+      </div>
+
       {comments.length > 0 && (
         <>
           <h3

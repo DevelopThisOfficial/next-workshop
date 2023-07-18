@@ -5,6 +5,7 @@
   justify-content: space-between;
   padding: 0px 30px;
   align-items: center;
+  position: relative;
 }
 
 .headerTitle {
@@ -16,18 +17,58 @@
   }
 }
 
+.mobileMenuIcon {
+  color: white;
+  scale: 1.8;
+  z-index: 11;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
 .navLinks {
-  display: flex;
+  position: absolute;
   list-style: none;
-  gap: 20px;
+  top: 0;
+  right: 0;
+  background-color: var(--blue-hosta);
+  height: 100vh;
+  z-index: 10;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+  padding: 4rem 5rem 0 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  transition: transform 0.3s ease-in-out;
+
+  @media screen and (min-width: 768px) {
+    position: static;
+    background-color: transparent;
+    height: auto;
+    flex-direction: row;
+    box-shadow: none;
+    padding: 0;
+  }
+}
+
+.open {
+  transform: translateX(0%);
+}
+
+.closed {
+  transform: translateX(100%);
+  @media screen and (min-width: 768px) {
+    transform: translateX(0%);
+  }
 }
 
 .navLink {
-  font-size: 0.9rem;
+  font-size: 1.3rem;
   font-weight: bold;
 
   @media screen and (min-width: 768px) {
-    font-size: 1.1rem;
   }
 }
 
