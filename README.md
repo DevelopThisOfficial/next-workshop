@@ -25,6 +25,7 @@ Throughout the live coding session, the audience suggested several features and 
 - CSS modules
 - Flexbox and Grid layout techniques
 - Simple state management using React hooks
+- Fetching data from an external API
   Please note that the list of features covered is not exhaustive, and the actual codebase may include additional components, libraries, or techniques depending on the specific suggestions received during the live event.
 
 ## Project Structure
@@ -32,14 +33,18 @@ Throughout the live coding session, the audience suggested several features and 
 The project follows a common Next.js project structure to ensure readability, maintainability, and scalability. Here is an overview of the main directories and files:
 
 ````
-├── app/                     # Source code
-│   ├── projects/            # /projects route
+├── app/                     # Routes
+│   ├── posts/               # /posts route
+│   ├── user/                # /posts route
+|   │   ├── [id]/
+|   │   |   ├── page.tsx     # /user/:id route
+│   ├── fonts.ts             # next/font/google
 │   ├── globals.css          # Global styles including color palette
-│   ├── layout.tsx           # Main application component
+│   ├── layout.tsx           # Default page layout
+│   ├── not-found.tsx        # 404 page
 │   ├── page.tsx             # / route
 ├── components/
-├── data/                    # CSS or styling related
-│   ├── projectsData.tsx
+├── data/                    # Fetching functions
 ├── public/                  # Static assets
 ├── .gitignore               # Files and directories to be ignored by Git
 ├── next.config.js           # Next.js configuration

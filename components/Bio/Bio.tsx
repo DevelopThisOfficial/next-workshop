@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function Bio() {
   return (
-    <div className="section" style={{ display: "flex" }}>
+    <div className={`section ${styles.bioSection}`}>
       <div className={styles.imageWrapper}>
         <Image
           src="https://picsum.photos/300"
@@ -12,7 +12,7 @@ function Bio() {
           style={{
             objectFit: "contain",
           }}
-          alt="Picture of Jude Clark"
+          alt="Random image from picsum.photos"
         />
       </div>
 
